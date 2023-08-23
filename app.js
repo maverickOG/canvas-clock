@@ -12,7 +12,8 @@ context.translate(radius,radius);
 radius = radius*0.90;
 
 
-function drawFace(context,radius){
+function drawFace(context,radius)
+{
     var grad;
     //drawing white area in the clock
     context.beginPath();
@@ -38,7 +39,8 @@ function drawFace(context,radius){
 
 
 
-function drawNumber(context,radius){
+function drawNumber(context,radius)
+{
     var num , ang;
     //set the font size 
     context.font=radius*0.17 + "px raleway";
@@ -59,7 +61,8 @@ function drawNumber(context,radius){
 
 
 
-function drawTime(context,radius){
+function drawTime(context,radius)
+{
     var now = new Date();
     var hour = now.getHours();
     var minute = now.getMinutes();
@@ -79,7 +82,8 @@ function drawTime(context,radius){
     drawHand(context,second,radius*0.9,radius*0.01)
 }
 
-function drawHand(context,pos,length,width){
+function drawHand(context,pos,length,width)
+{
     context.beginPath();
     context.lineWidth=width
     context.lineCap="round"
@@ -94,7 +98,8 @@ function drawHand(context,pos,length,width){
 
 setInterval(drawClock,1000)
 
-function drawClock(){
+function drawClock()
+{
     drawFace(context,radius);
     drawNumber(context,radius)
     drawTime(context,radius)
